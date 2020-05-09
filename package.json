@@ -1,0 +1,22 @@
+{
+  "name": "seabattle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-lint": "sass-lint -q -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://dimasemehuk7@review.gerrithub.io:29418/dimasemehuk7/seabattle"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass-lint": "^1.13.1"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.3"
+  }
+}

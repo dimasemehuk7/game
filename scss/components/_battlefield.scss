@@ -1,0 +1,51 @@
+@import "scss/abstracts/colors";
+
+$cell-size: 33px;
+
+.battlefield {
+  &__cell {
+    width: $cell-size;
+    height: $cell-size;
+    border-left: 1px solid $color-main-them;
+    border-top: 1px solid $color-main-them;
+    background-color: $color-light-lightest;
+    position: relative;
+
+    &:last-child {
+      border-right: 1px solid $color-main-them;
+    }
+  }
+
+  &__row {
+    margin-top: -1px;
+    display: flex;
+
+    &:last-child {
+      .battlefield__cell {
+        border-bottom: 1px solid $color-main-them;
+      }
+    }
+  }
+
+  &__cell-label {
+    position: absolute;
+    font-family: monospace;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+
+    &.battlefield__label-row {
+      text-align: right;
+      line-height: $cell-size;
+      left: -43px;
+    }
+
+    &.battlefield__label-col {
+      text-align: center;
+      top: -29px;
+    }
+  }
+}
+
+
+ 

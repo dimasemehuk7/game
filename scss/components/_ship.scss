@@ -1,0 +1,65 @@
+@import "scss/abstracts/colors";
+@import "scss/components/battlefield";
+
+$single-deck-length: $cell-size;
+$double-deck-length: (($cell-size * 2) + 1);
+$triple-deck-length: (($cell-size * 3) + 2);
+$four-deck-length: (($cell-size* 4) + 2);
+
+.ship {
+  position: absolute;
+  background-color: $color-ship-background;
+  border: 2px solid $color-ship-border;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  margin: -2px;
+
+  &__four-deck {
+    &.vertical {
+      height: $four-deck-length;
+      width: $single-deck-length;
+    }
+
+    &.horizontal {
+      height: $single-deck-length;
+      width: $four-deck-length;
+    }
+  }
+
+  &__triple-deck {
+    &.vertical {
+      height: $triple-deck-length;
+      width: $single-deck-length;
+    }
+
+    &.horizontal {
+      height: $single-deck-length;
+      width: $triple-deck-length;
+    }
+  }
+
+  &__double-deck {
+    &.vertical {
+      height: $double-deck-length;
+      width: $single-deck-length;
+    }
+
+    &.horizontal {
+      height: $single-deck-length;
+      width: $double-deck-length;
+    }
+  }
+
+  &__single-deck {
+    &.vertical {
+      height: $single-deck-length;
+      width: $single-deck-length;
+    }
+
+    &.horizontal {
+      height: $single-deck-length;
+      width: $single-deck-length;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "scss/components/battlefield";
+@import "scss/components/ship";
+
+$color-port-border: #b2b2b9;
+
+.port {
+  &__row {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+  }
+
+  &__dock {
+    position: relative;
+    height: $cell-size;
+    margin-left: 30px;
+    border: 1px dotted $color-port-border;
+  }
+
+  &__four-deck-dock {
+    width: $four-deck-length;
+  }
+
+  &__triple-deck-dock {
+    width: $triple-deck-length;
+  }
+
+  &__double-deck-dock {
+    width: $double-deck-length;
+  }
+
+  &__single-deck-dock {
+    width: $single-deck-length;
+  }
+}
+
