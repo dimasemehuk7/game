@@ -2,9 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SeaBattle</title>
+    <title>Sea Battle</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
 </head>
 <body>
-
+    <div class="container">
+        <div class="column">
+            <div id="player-battlefield" class="battlefield"></div>
+        </div>
+        <div class="column">
+            <div id="computer-battlefield"></div>
+            <div class="port">
+                <div class="port__row">
+                    <div class="port__dock port__four-deck-dock">
+                        <div class="ship ship__four-deck horizontal"></div>
+                    </div>
+                </div>
+                <div class="port__row">
+                    <div class="port__dock port__triple-deck-dock">
+                        <div class="ship ship__triple-deck horizontal"></div>
+                    </div>
+                    <div class="port__dock port__triple-deck-dock">
+                        <div class="ship ship__triple-deck horizontal"></div>
+                    </div>
+                </div>
+                <div class="port__row">
+                    <div class="port__dock port__double-deck-dock">
+                        <div class="ship ship__double-deck horizontal"></div>
+                    </div>
+                    <div class="port__dock port__double-deck-dock">
+                        <div class="ship ship__double-deck horizontal"></div>
+                    </div>
+                    <div class="port__dock port__double-deck-dock">
+                        <div class="ship ship__double-deck horizontal"></div>
+                    </div>
+                </div>
+                <div class="port__row">
+                    <div class="port__dock port__single-deck-dock">
+                        <div class="ship ship__single-deck horizontal"></div>
+                    </div>
+                    <div class="port__dock port__single-deck-dock">
+                        <div class="ship ship__single-deck horizontal"></div>
+                    </div>
+                    <div class="port__dock port__single-deck-dock">
+                        <div class="ship ship__single-deck horizontal"></div>
+                    </div>
+                    <div class="port__dock port__single-deck-dock">
+                        <div class="ship ship__single-deck horizontal"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
+<script id="battlefield-tmpl" type="text/template">
+    {{#each rows}}
+    <div class="battlefield__row">
+        {{#each this}}
+        <div class="battlefield__cell" data-row="{{row}}" data-col="{{col}}">
+            {{#if rowLabel}}
+            <div class="battlefield__cell-label battlefield__label-row">{{rowLabel}}</div>
+            {{/if}}
+            {{#if colLabel}}
+            <div class="battlefield__cell-label battlefield__label-col">{{colLabel}}</div>
+            {{/if}}
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</script>
