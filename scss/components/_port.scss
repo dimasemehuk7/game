@@ -3,6 +3,12 @@
 
 $color-port-border: #b2b2b9;
 
+.harbor {
+  .actions {
+    margin-top: 60px;
+  }
+}
+
 .port {
   &__row {
     display: flex;
