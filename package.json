@@ -17,6 +17,6 @@
     "sass-lint": "^1.13.1"
   },
   "dependencies": {
-    "handlebars": "^4.7.3"
+    "handlebars": "^4.7.7"
   }
 }
